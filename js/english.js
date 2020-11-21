@@ -14,45 +14,30 @@ const childDivs_p = document.getElementById('p').getElementsByTagName('div');
 const childDivs_r = document.getElementById('r').getElementsByTagName('div');
 const childDivs_h = document.getElementById('h').getElementsByTagName('div');
 const childDivs_b = document.getElementById('b').getElementsByTagName('div');
-const home_div = document.getElementById("home");
 const okay_div = document.getElementById("okay");
 const IPASymbol_span = document.getElementById("IPA-symbol");
 const IPASymbols = {
     // high vowels
     'i': ['unrounded', 'high', 'front'],
-    'y': ['rounded', 'high', 'front'],
-    'ɨ': ['unrounded', 'high', 'central'],
-    'ɯ': ['unrounded', 'high', 'back'],
     'u': ['rounded', 'high', 'back'],
     'ɪ': ['unrounded', 'high', 'front'],
     'ʊ': ['rounded', 'high', 'back'],
     // mid vowels
-    'e': ['unrounded', 'mid', 'front'],
     'ə': ['unrounded', 'mid', 'central'],
-    'o': ['rounded', 'mid', 'back'],
     'ɛ': ['unrounded', 'mid', 'front'],
-    'ʌ': ['unrounded', 'mid', 'back'],
-    'ɔ': ['rounded', 'mid', 'back'],
+    'ʌ': ['unrounded', 'mid', 'central'],
     // low
     'æ': ['unrounded', 'low', 'front'],
-    'a': ['unrounded', 'low', 'central'],
     'ɑ': ['unrounded', 'low', 'back'],
     // stop
     'p': ["voiceless", "bilabial", "stop"], 
     'b': ["voiced", "bilabial", "stop"], 
     't': ["voiceless", "alveolar", "stop"], 
     'd': ["voiced", "alveolar", "stop"], 
-    'ʈ': ["voiceless", "retroflex", "stop"], 
-    'ɖ': ["voiced", "retroflex", "stop"], 
-    'c': ["voiceless", "palatal", "stop"], 
-    'ɟ': ["voiced", "palatal", "stop"], 
     'k': ["voiceless", "velar", "stop"],
     'g': ["voiced", "velar", "stop"],
-    'q': ["voiceless", "uvular", "stop"],
     'ʔ': ["voiceless", "glottal", "stop"],
     // fricative
-    'ɸ': ["voiceless", "bilabial", "fricative"],
-    'β': ["voiced", "bilabial", "fricative"],
     'f': ["voiceless", "labiodental", "fricative"],
     'v': ["voiced", "labiodental", "fricative"],
     'θ': ["voiceless", "dental", "fricative"],
@@ -61,60 +46,35 @@ const IPASymbols = {
     'z': ["voiced", "alveolar", "fricative"],
     'ʃ': ["voiceless", "postalveolar", "fricative"],
     'ʒ': ["voiced", "postalveolar", "fricative"],
-    'ʂ': ["voiceless", "retroflex", "fricative"],
-    'ç': ["voiceless", "palatal", "fricative"],
-    'x': ["voiceless", "velar", "fricative"],
-    'ɣ': ["voiced", "velar", "fricative"],
-    'χ': ["voiceless", "uvular", "fricative"],
-    'ʁ': ["voiced", "uvular", "fricative"],
     'h': ["voiceless", "glottal", "fricative"],
+    'ɦ': ["voiced", "glottal", "fricative"],
     // affricate
-    'ts': ["voiceless", "alveolar", "affricate"],
-    'dz': ["voiced", "alveolar", "affricate"],
     'tʃ': ["voiceless", "postalveolar", "affricate"],
     'dʒ': ["voiced", "postalveolar", "affricate"],
-    'ʈʂ': ["voiceless", "retroflex", "affricate"],
-    'cç': ["voiceless", "palatal", "affricate"],
-    'ɟʝ': ["voiced", "palatal", "affricate"],
     // nasal
     'm': ["voiced", "bilabial", "nasal"],
     'n': ["voiced", "alveolar", "nasal"],
-    'ɳ': ["voiced", "retroflex", "nasal"],
-    'ɲ': ["voiced", "palatal", "nasal"],
     'ŋ': ["voiced", "velar", "nasal"],
     // flap
     'ɾ': ["voiced", "alveolar", "flap/tap"],
-    'ɽ': ["voiced", "retroflex", "flap/tap"],
-    // trill
-    'r': ["voiced", "alveolar", "trill"],
     // lateral
     'l': ["voiced", "alveolar", "lateral"],
-    'ɭ': ["voiced", "retroflex", "lateral"],
-    'ʎ': ["voiced", "palatal", "lateral"],
     // approximant
-    'w': ["voiced", "bilabial", "approximant"],
+    // 'w': ["voiced", "bilabial", "approximant"],
     'ɹ': ["voiced", "alveolar", "approximant"],
-    'ɻ': ["voiced", "retroflex", "approximant"],
     'j': ["voiced", "palatal", "approximant"],
 }
 const IPAVowls = [
     'i', 
-    'y', 
-    'ɨ', 
-    'ɯ', 
     'u', 
     'ɪ',
     'ʊ',
     // mid vowels
-    'e',
     'ə',
-    'o',
     'ɛ',
     'ʌ',
-    'ɔ',
     // low
     'æ',
-    'a',
     'ɑ'
 ];
 

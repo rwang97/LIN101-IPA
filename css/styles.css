@@ -15,25 +15,40 @@ header {
     padding: 20px;
 }
 
-
 header > h1 {
     color: #2a2b38;
     text-align: center;
     font-family: Asap, sans-serif;
 }
 
+/* For index.html */
+.IPA-type {
+    margin-top: 35px;
+    text-align: center;
+}
+
+#start-message {
+    text-align: center;
+    color: white;
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+/* For all other styles */
 .IPA-board {
     /* outside box, 20 at top, 20 at bottom, auto for centering*/
     margin: 35px auto;
     border: 4px solid white;
     border-radius: 4px;
     text-align: center;
-    width: 150px;
-    height: 130px;
+    width: 130px;
+    height: 120px;
     color: white;
-    font-size: 46px;
+    font-size: 55px;
     /* inside box, 15px at top bottom, 20px left right*/
-    padding: 30px 20px;
+    padding: 20px 20px;
     /* font-family: Asap, sans-serif; */
     /* https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm#numbers */
     font-family: "lucida sans unicode";
@@ -57,16 +72,28 @@ header > h1 {
 }
 
 .voicing {
-    margin: 20px;
+    margin: 25px;
 }
 
 .manner-of-articulation {
-    margin: 20px;
+    margin: 25px;
 }
 
 .place-of-articulation {
+    margin: 25px;
+}
+
+/* .rounding {
     margin: 20px;
 }
+
+.height {
+    margin: 20px;
+}
+
+.backness {
+    margin: 20px;
+} */
 
 .choice {
     border: 2px solid white;
