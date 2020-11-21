@@ -78,6 +78,22 @@ const IPAVowls = [
     'ɑ'
 ];
 
+// string names for all the symbols
+const symbols = Object.keys(IPASymbols);
+
+// shuffle indices to random choose next symbol
+let shuffleIndices = Array.from(Array(symbols.length).keys());
+let currentIndex = 0;
+shuffleArray(shuffleIndices);
+
+/* Randomize array in-place using Durstenfeld shuffle algorithm */
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 function selectIPA_voicing(userChoice_div) {
     if (!clickedOK) {
         userChoice = userChoice_div.innerHTML;
@@ -308,10 +324,16 @@ function check(symbol) {
 }
 
 function next() {
-    // const randomNumber = Math.floor(Math.random() * 52);
-    var symbols = Object.keys(IPASymbols);
-    const index = Math.floor(Math.random() * symbols.length);
+
+    if (currentIndex == symbols.length) {
+        console.log("shuffled, next round");
+        shuffleArray(shuffleIndices);
+        currentIndex = 0;
+    }
+    const index = shuffleIndices[currentIndex];
     IPASymbol_span.innerHTML = symbols[index];
+
+    currentIndex++;
     return symbols[index]
 }
 
