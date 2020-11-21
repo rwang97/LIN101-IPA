@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2a2b38;
+}
+
+header {
+    background: white;
+    padding: 20px;
+}
+
+
+header > h1 {
+    color: #2a2b38;
+    text-align: center;
+    font-family: Asap, sans-serif;
+}
+
+.IPA-board {
+    /* outside box, 20 at top, 20 at bottom, auto for centering*/
+    margin: 35px auto;
+    border: 4px solid white;
+    border-radius: 4px;
+    text-align: center;
+    width: 150px;
+    height: 130px;
+    color: white;
+    font-size: 46px;
+    /* inside box, 15px at top bottom, 20px left right*/
+    padding: 30px 20px;
+    /* font-family: Asap, sans-serif; */
+    /* https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm#numbers */
+    font-family: "lucida sans unicode";
+    position: relative;
+}
+
+.result {
+    font-size: 25px;
+    color: white;
+}
+
+.result > p {
+    text-align: center;
+    font-weight: bold;
+    font-family: Asap, sans-serif;
+}
+
+.choices {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.voicing {
+    margin: 20px;
+}
+
+.manner-of-articulation {
+    margin: 20px;
+}
+
+.place-of-articulation {
+    margin: 20px;
+}
+
+.choice {
+    border: 2px solid white;
+    /* border-radius: 50%; */
+    margin: 10px 10px;
+    padding: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    color: #aaccff;
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background: #1e1e1e;
+}
+
+.choice-vowel {
+    border: 2px solid white;
+    /* border-radius: 50%; */
+    margin: 20px 15px;
+    padding: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    color: #aaccff;
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.choice-vowel:hover {
+    cursor: pointer;
+    background: #1e1e1e;
+}
+
+#action-message {
+    text-align: center;
+    color: white;
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.action {
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 15px 20px;
+    padding: 15px 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+
+    color: white;
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.action:hover {
+    cursor: pointer;
+    background: #1e1e1e;
+}
+
+/* #bb86fc purple
+   #aaccff blue
+*/
+
+.green-glow {
+    border: 4px solid #4dcc7d;
+    /* horizontal, vertical, blur, (spread, how far the shadow should go), color */
+    box-shadow: 0 0 10px #31b43a;
+}
+
+.red-glow {
+    border: 4px solid #fc121b;
+    box-shadow: 0 0 10px #d01115;
+}
+
+.gray-glow {
+    border: 4px solid #464647;
+    box-shadow: 0 0 10px #25292b;
+}
+
+.blue-glow {
+    /* border: 4px solid #aaccff;
+    box-shadow: 0 0 10px #99baf0; */
+    border: 4px solid #bb86fc;
+    box-shadow: 0 0 10px #bb86fc;
+
+    /* border: 4px solid #f2fa00;
+    box-shadow: 0 0 10px #cbe100; */
+}
+
+.notDisplayed {
+    display:none;
+}
